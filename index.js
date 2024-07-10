@@ -1,0 +1,6 @@
+"use strict";
+//@ts-ignore
+const sum = (a, b) => {
+    return a + b;
+};
+console.log(sum(2, 5));
