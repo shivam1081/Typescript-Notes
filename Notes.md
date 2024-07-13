@@ -200,3 +200,45 @@ function add<T, U>(a: T, b: U) {
 add('shivam', 5);
 ```
 ```
+
+`src\g_mut_var_constraints.ts`
+1. **Important:** When using generic and non-generic types together, while calling the function, we need to define the type in a specific manner. But with non-generics, we don't need to.
+
+    ```typescript
+    // function add(a: number, b: number): number;
+    // function add(a: string, b: string): string;
+    // function add(a: any, b: any): any {
+    //     return a + b;
+    // }
+    ```
+
+2. Generic function definition:
+
+    ```typescript
+    function add<T, U>(a: T, b: U, c: boolean) {
+        console.log(typeof a);
+        console.log(typeof b);
+        console.log(typeof c);
+    }
+
+    add<number, string>(5, "thapa", true); // Output: 
+    add<string, number>("Hello, ", 5, false);
+    ```
+
+3. Declaring `result1` and `result2` variables:
+
+    ```typescript
+    const result1;
+    const result2;
+    ```
+
+4. Defining a function `addTwo`:
+
+    ```typescript
+    const addTwo = (num1: number, num2: number) => {
+        return num1 + num2;
+    };
+
+    console.log(addTwo(5, 19));
+    ```
+
